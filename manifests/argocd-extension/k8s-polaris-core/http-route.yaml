@@ -8,6 +8,10 @@ spec:
     - name: public
       namespace: istio-system
   rules:
-    - backendRefs:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /argocd
+      backendRefs:
         - name: argocd-server
           port: 80

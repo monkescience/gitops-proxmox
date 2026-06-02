@@ -1,6 +1,10 @@
 global:
   storageClass: local-path
 
+signoz:
+  env:
+    signoz_global_external__url: http://192.168.134.200/signoz
+
 clickhouse:
   persistence:
     enabled: true

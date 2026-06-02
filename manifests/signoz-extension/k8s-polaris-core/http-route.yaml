@@ -8,6 +8,10 @@ spec:
     - name: public
       namespace: istio-system
   rules:
-    - backendRefs:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /signoz
+      backendRefs:
         - name: signoz
           port: 8080
