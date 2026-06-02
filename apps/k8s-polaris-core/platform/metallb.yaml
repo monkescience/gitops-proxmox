@@ -47,7 +47,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: metallb-config
+  name: metallb-extension
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
@@ -58,7 +58,7 @@ spec:
   source:
     repoURL: https://github.com/monkescience/gitops-proxmox.git
     targetRevision: main
-    path: manifests/metallb-config/k8s-polaris-core
+    path: manifests/metallb-extension/k8s-polaris-core
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system

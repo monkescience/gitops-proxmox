@@ -35,7 +35,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-cd-route
+  name: argocd-extension
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "3"
@@ -46,7 +46,7 @@ spec:
   source:
     repoURL: https://github.com/monkescience/gitops-proxmox.git
     targetRevision: main
-    path: manifests/argocd-route/k8s-polaris-core
+    path: manifests/argocd-extension/k8s-polaris-core
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
