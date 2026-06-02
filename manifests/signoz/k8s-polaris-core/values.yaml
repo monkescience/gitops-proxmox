@@ -4,6 +4,14 @@ global:
 signoz:
   env:
     signoz_global_external__url: http://192.168.134.200/signoz
+    signoz_user_root_enabled: true
+    signoz_user_root_email: admin@polaris.local
+    signoz_user_root_org_name: default
+    signoz_user_root_password:
+      valueFrom:
+        secretKeyRef:
+          name: signoz-root-user
+          key: password
 
 clickhouse:
   persistence:
