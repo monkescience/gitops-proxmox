@@ -1,0 +1,8 @@
+global:
+  storageClass: local-path
+
+clickhouse:
+  persistence:
+    enabled: true
+    storageClass: local-path
+    size: 20Gi

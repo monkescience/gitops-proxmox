@@ -1,0 +1,14 @@
+otelCollectorEndpoint: signoz-otel-collector.observability.svc.cluster.local:4317
+otelInsecure: true
+
+presets:
+  logsCollection:
+    enabled: true
+  hostMetrics:
+    enabled: true
+  kubeletMetrics:
+    enabled: true
+  clusterMetrics:
+    enabled: true
+  kubernetesAttributes:
+    enabled: true
