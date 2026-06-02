@@ -1,24 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: signoz
+  name: signoz-init
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "0"
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
-  sources:
-    - repoURL: https://charts.signoz.io
-      chart: signoz
-      targetRevision: 0.126.1
-      helm:
-        valueFiles:
-          - $values/manifests/signoz/k8s-polaris-core/values.yaml
-    - repoURL: https://github.com/monkescience/gitops-proxmox.git
-      targetRevision: main
-      ref: values
+  source:
+    repoURL: https://github.com/monkescience/gitops-proxmox.git
+    targetRevision: main
+    path: manifests/signoz-init/k8s-polaris-core
   destination:
     server: https://kubernetes.default.svc
     namespace: observability
@@ -26,11 +20,6 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    managedNamespaceMetadata:
-      labels:
-        pod-security.kubernetes.io/audit: privileged
-        pod-security.kubernetes.io/enforce: privileged
-        pod-security.kubernetes.io/warn: privileged
     retry:
       limit: 5
       backoff:
