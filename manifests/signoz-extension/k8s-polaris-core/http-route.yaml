@@ -10,6 +10,17 @@ spec:
   rules:
     - matches:
         - path:
+            type: Exact
+            value: /signoz
+      filters:
+        - type: RequestRedirect
+          requestRedirect:
+            path:
+              type: ReplaceFullPath
+              replaceFullPath: /signoz/
+            statusCode: 301
+    - matches:
+        - path:
             type: PathPrefix
             value: /signoz
       backendRefs:
