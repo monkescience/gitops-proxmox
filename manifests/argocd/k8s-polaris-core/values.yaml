@@ -32,6 +32,7 @@ server:
 
 configs:
   params:
+    controller.diff.server.side: "true"
     server.insecure: true
 
 dex:
