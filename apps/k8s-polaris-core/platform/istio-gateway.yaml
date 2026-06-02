@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-polaris-core-istio-gateway
+  name: istio-gateway
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "2"
@@ -35,7 +35,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-polaris-core-argocd-route
+  name: argo-cd-route
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "3"

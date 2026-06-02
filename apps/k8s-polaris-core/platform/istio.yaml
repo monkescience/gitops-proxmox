@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-polaris-core-istio-base
+  name: istio-base
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "0"
@@ -41,7 +41,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-polaris-core-istiod
+  name: istiod
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "1"

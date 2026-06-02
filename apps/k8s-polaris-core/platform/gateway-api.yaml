@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-polaris-core-gateway-api
+  name: gateway-api
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "-3"

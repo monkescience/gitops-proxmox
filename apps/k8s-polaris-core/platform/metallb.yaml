@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-polaris-core-metallb
+  name: metallb
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "-2"
@@ -42,7 +42,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-polaris-core-metallb-config
+  name: metallb-config
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
