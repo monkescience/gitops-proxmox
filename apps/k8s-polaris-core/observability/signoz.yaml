@@ -19,6 +19,9 @@ spec:
     - repoURL: https://github.com/monkescience/gitops-proxmox.git
       targetRevision: main
       ref: values
+    - repoURL: https://github.com/monkescience/gitops-proxmox.git
+      targetRevision: main
+      path: manifests/signoz-init/k8s-polaris-core
   destination:
     server: https://kubernetes.default.svc
     namespace: observability
