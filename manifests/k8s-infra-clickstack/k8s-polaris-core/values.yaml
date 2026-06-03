@@ -1,4 +1,4 @@
-otelCollectorEndpoint: clickstack-otel-collector.clickstack.svc.cluster.local:4317
+otelCollectorEndpoint: http://clickstack-otel-collector.clickstack.svc.cluster.local:4318
 otelInsecure: true
 
 otelAgent:
