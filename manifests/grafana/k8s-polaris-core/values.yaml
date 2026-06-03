@@ -3,6 +3,9 @@ persistence:
   storageClassName: local-path
   size: 2Gi
 
+initChownData:
+  enabled: false
+
 plugins:
   - grafana-clickhouse-datasource
 
