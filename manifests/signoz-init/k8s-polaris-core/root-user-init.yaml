@@ -59,7 +59,8 @@ spec:
                 echo "signoz-root-user secret already exists, nothing to do"
                 exit 0
               fi
-              password="$(tr -dc 'A-Za-z0-9' </dev/urandom | head -c 32)"
+              rand() { LC_ALL=C tr -dc "$1" </dev/urandom | head -c "$2"; }
+              password="$(rand 'A-Z' 4)$(rand 'a-z' 4)$(rand '0-9' 4)$(rand '!@#%^*_=+-' 4)"
               kubectl create secret generic signoz-root-user \
                 --namespace observability \
                 --from-literal=password="$password"
