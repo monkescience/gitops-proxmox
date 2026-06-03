@@ -1,0 +1,7 @@
+hyperdx:
+  service:
+    type: LoadBalancer
+    annotations:
+      metallb.io/loadBalancerIPs: 192.168.134.201
+  config:
+    FRONTEND_URL: "http://192.168.134.201:3000"
