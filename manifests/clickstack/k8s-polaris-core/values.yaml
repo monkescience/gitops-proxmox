@@ -5,3 +5,7 @@ hyperdx:
       metallb.io/loadBalancerIPs: 192.168.134.201
   config:
     FRONTEND_URL: "http://192.168.134.201:3000"
+
+otel-collector:
+  image:
+    tag: "2.27.0"
