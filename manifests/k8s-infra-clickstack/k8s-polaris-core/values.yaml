@@ -1,6 +1,17 @@
 otelCollectorEndpoint: clickstack-otel-collector.clickstack.svc.cluster.local:4317
 otelInsecure: true
 
+otelAgent:
+  ports:
+    otlp:
+      hostPort: null
+    otlp-http:
+      hostPort: null
+    metrics:
+      hostPort: null
+    health-check:
+      hostPort: null
+
 presets:
   logsCollection:
     enabled: true
