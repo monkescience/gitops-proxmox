@@ -12,7 +12,7 @@ spec:
   sources:
     - repoURL: https://open-telemetry.github.io/opentelemetry-helm-charts
       chart: opentelemetry-collector
-      targetRevision: 0.158.0
+      targetRevision: 0.158.1
       helm:
         valueFiles:
           - $values/manifests/otlp-auth-proxy/k8s-polaris-core/values.yaml
