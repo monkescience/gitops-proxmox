@@ -12,7 +12,7 @@ spec:
   sources:
     - repoURL: https://clickhouse.github.io/ClickStack-helm-charts
       chart: clickstack
-      targetRevision: 3.0.0
+      targetRevision: 3.0.1
       helm:
         valueFiles:
           - $values/manifests/clickstack/k8s-polaris-core/values.yaml
