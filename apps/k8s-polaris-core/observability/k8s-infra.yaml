@@ -12,7 +12,7 @@ spec:
   sources:
     - repoURL: https://charts.signoz.io
       chart: k8s-infra
-      targetRevision: 0.16.0
+      targetRevision: 0.17.0
       helm:
         valueFiles:
           - $values/manifests/k8s-infra/k8s-polaris-core/values.yaml
