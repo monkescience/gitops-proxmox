@@ -12,7 +12,7 @@ spec:
   source:
     repoURL: https://istio-release.storage.googleapis.com/charts
     chart: base
-    targetRevision: 1.30.3
+    targetRevision: 1.30.4
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-system
@@ -52,7 +52,7 @@ spec:
   sources:
     - repoURL: https://istio-release.storage.googleapis.com/charts
       chart: istiod
-      targetRevision: 1.30.3
+      targetRevision: 1.30.4
       helm:
         valueFiles:
           - $values/manifests/istiod/k8s-polaris-core/values.yaml
